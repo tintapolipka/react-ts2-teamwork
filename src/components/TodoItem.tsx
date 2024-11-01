@@ -1,16 +1,17 @@
 import { Todo } from "../interfaces/Todo";
 
 const TodoItem: React.FC<Todo> = ({ title, done }) => {
+  
+  const inputId = `id-${title.split(/\s+/).join('-')}`
+  
   return (
-    <div>
-      <h1>{title}</h1>
-      <label>
+    <li key={inputId}>
         {done ?
-          (<input type="checkbox" checked />) : (<input type="checkbox" />)
+          (<input id={inputId} type="checkbox" checked />) : (<input id={inputId} type="checkbox" />)
         }
-      </label>
-      <button>Delete</button>
-    </div>
+      <label htmlFor={inputId}><h1>{title}</h1></label>
+      <button>🗑️</button>
+    </li>
   )
 }
 
