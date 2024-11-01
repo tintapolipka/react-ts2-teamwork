@@ -1,7 +1,8 @@
 import React from 'react';
+
 import TodoList from './components/TodoList';
 import Body from './components/Body';
-
+import './styles/styles.css';
 
 
 const App: React.FC = () => {
