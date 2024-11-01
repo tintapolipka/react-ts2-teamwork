@@ -6,3 +6,8 @@ export interface Todo {
 export interface TodoListProps {
   todos: Todo[];
 }
+
+export interface TodoItemProps extends Todo {
+  
+  handleDone: (isdone:boolean)=>void;
+}
