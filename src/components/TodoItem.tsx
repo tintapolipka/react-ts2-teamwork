@@ -2,7 +2,7 @@ import { TodoItemProps } from "../interfaces/Todo"
 
 const TodoItem: React.FC<TodoItemProps> = ({ title, done, handleDone}:TodoItemProps) => {
   function handleChangeCheckBox(){
-    handleDone(!done)
+    handleDone(!done);
   }
 
   return (
