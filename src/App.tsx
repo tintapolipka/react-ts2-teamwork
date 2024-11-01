@@ -1,15 +1,15 @@
 import React from 'react';
-import TodoItem from './components/TodoItem';
+
+import TodoList from './components/TodoList';
+import Body from './components/Body';
 import './styles/styles.css';
+
 
 const App: React.FC = () => {
   return (
-    <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      <h1>Üdvözöllek a React alkalmazásban!</h1>
-      <p>Ez egy alap App komponens TypeScript-tel.</p>
-
-      <TodoItem title='Süket kutya' done={false} />
-    </div>
+    <Body>
+    <TodoList todos={[{title:"Pikk",done:false},{title:"Pakk",done:false},{title:"Pukk",done:true}]}  />  
+    </Body>
   );
 };
 

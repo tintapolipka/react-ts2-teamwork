@@ -1,19 +1,18 @@
-import { useState } from "react";
-import { Todo } from "../interfaces/Todo";
+import { TodoItemProps } from "../interfaces/Todo";
 
-const TodoItem: React.FC<Todo> = ({ title, done }) => {
-
-  const inputId = `id-${title.split(/\s+/).join('-')}`
-
-  const [doneTodo, setDoneTodo] = useState<boolean>(done);
-
+const TodoItem: React.FC<TodoItemProps> = ({ title, done, handleDone}:TodoItemProps) => {
+  function handleChangeCheckBox(){
+    handleDone(!done);
+  }
+   const inputId = `id-${title.split(/\s+/).join('-')}`
   return (
     <li key={inputId}>
-      <input type="checkbox" checked={doneTodo} onChange={e => setDoneTodo(e.target.checked)} />
+        <input id={inputId} type="checkbox" onChange={handleChangeCheckBox} checked={done} />
       <label htmlFor={inputId}><h1>{title}</h1></label>
+      {done && <p>Done!</p>}
       <button>🗑️</button>
     </li>
   )
 }
 
-export default TodoItem
+export default TodoItem;
