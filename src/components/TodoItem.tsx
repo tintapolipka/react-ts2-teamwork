@@ -1,16 +1,18 @@
+import { useState } from "react";
 import { Todo } from "../interfaces/Todo";
 
 const TodoItem: React.FC<Todo> = ({ title, done }) => {
+
+  const inputId = `id-${title.split(/\s+/).join('-')}`
+
+  const [doneTodo, setDoneTodo] = useState<boolean>(done);
+
   return (
-    <div>
-      <h1>{title}</h1>
-      <label>
-        {done ?
-          (<input type="checkbox" checked />) : (<input type="checkbox" />)
-        }
-      </label>
-      <button>Delete</button>
-    </div>
+    <li key={inputId}>
+      <input type="checkbox" checked={doneTodo} onChange={e => setDoneTodo(e.target.checked)} />
+      <label htmlFor={inputId}><h1>{title}</h1></label>
+      <button>🗑️</button>
+    </li>
   )
 }
 
