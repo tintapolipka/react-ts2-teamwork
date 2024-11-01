@@ -1,5 +1,6 @@
 import React from 'react';
 import TodoItem from './components/TodoItem';
+import './styles/styles.css';
 
 const App: React.FC = () => {
   return (
