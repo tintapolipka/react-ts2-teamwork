@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
+:root {
+  --main: #78c1f3;
+  --accent: #edeef0;
+  --dark: rgba(0, 0, 0, 0.892);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +14,7 @@
 }
 
 body {
-  background: #78c1f3;
+  background: var(--main);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -34,7 +40,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #edeef0;
+  background: var(--accent);
   border-radius: 30px;
   padding-left: 20px;
   margin-bottom: 25px;
@@ -69,7 +75,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #edeef0;
+  background: var(--accent);
   margin-bottom: 10px;
   border-radius: 5px;
 }
@@ -92,8 +98,8 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.892);
-  color: rgba(255, 255, 255, 0.901);
+  background-color: var(--dark);
+  color: var(--accent);
   text-align: center;
 }
 
@@ -103,7 +109,7 @@ footer p {
 
 footer a {
   text-decoration: none;
-  color: #78c1f3;
+  color: var(--main);
   font-size: medium;
   transition: color ease-in-out 300ms;
 }
