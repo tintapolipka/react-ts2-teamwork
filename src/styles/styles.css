@@ -13,7 +13,34 @@
   box-sizing: border-box;
 }
 
-body {
+body {   
+  .todo-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-left: 5px;
+    justify-content: center;
+  }
+
+  .todo-body input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px 0;
+    font-size: 20px;
+  }
+  .todo-body button {
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    height: 40px;
+    width: 40px;
+    background: limegreen;
+  }
+
   background: var(--main);
   min-height: 100vh;
   display: flex;
@@ -28,14 +55,6 @@ body {
   border-radius: 10px;
 }
 
-.todo-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  padding-left: 5px;
-  justify-content: center;
-}
-
 .todo-body {
   display: flex;
   align-items: center;
@@ -44,15 +63,6 @@ body {
   border-radius: 30px;
   padding-left: 20px;
   margin-bottom: 25px;
-}
-
-.todo-body input {
-  flex: 1;
-  border: none;
-  outline: none;
-  background: transparent;
-  padding: 15px 0;
-  font-size: 20px;
 }
 
 .todo-body img {
@@ -126,3 +136,4 @@ footer a:hover {
   padding-top: 1em;
   margin-bottom: 1em;
 }
+
