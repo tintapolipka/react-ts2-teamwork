@@ -9,6 +9,6 @@ export interface TodoListProps {
 }
 
 export interface TodoItemProps extends Todo {
-  handleDelete: (id: number | string) => void;
+  handleDelete: () => void;
   handleDone: (isdone:boolean) => void;
 }
