@@ -13,7 +13,7 @@ const App: React.FC = () => {
     <div className='app-container'>
       <Body>
         <Header />
-        <TodoList todos={[{ title: "Pikk", done: false }, { title: "Pakk", done: false }, { title: "Pukk", done: true }]} />
+        <TodoList todos={[{ id: 1, title: "Pikk", done: false }, { id: 2, title: "Pakk", done: false }, { id: 3, title: "Pukk", done: true }]} />
       </Body>
       <Footer />
     </div>

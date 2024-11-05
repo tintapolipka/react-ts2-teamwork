@@ -16,7 +16,11 @@ const TodoList : React.FC<TodoListProps>=({todos})=>{
         }
     }
 
-    const todoLiList = todoList.map((todo,index)=><TodoItem handleDone={handleTodoChanged(index)} title={todo.title} done={todo.done} key={index}/>)
+    function handleDelete(id: string | number) {
+        setTodoList(todos.filter(todo => todo.id !== id));
+    }
+
+    const todoLiList = todoList.map((todo,index)=><TodoItem handleDelete={handleDelete} handleDone={handleTodoChanged(index)} id={todo.id} title={todo.title} done={todo.done} key={index}/>)
 
     return (<ul>{todoLiList}</ul>)
 }

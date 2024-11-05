@@ -1,4 +1,5 @@
 export interface Todo {
+  id: number | string;
   title: string;
   done: boolean;
 }
@@ -8,6 +9,6 @@ export interface TodoListProps {
 }
 
 export interface TodoItemProps extends Todo {
-  
-  handleDone: (isdone:boolean)=>void;
+  handleDelete: (id: number | string) => void;
+  handleDone: (isdone:boolean) => void;
 }
