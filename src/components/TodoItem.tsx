@@ -1,6 +1,6 @@
 import { TodoItemProps } from "../interfaces/Todo";
 
-const TodoItem: React.FC<TodoItemProps> = ({ title, done, handleDone}:TodoItemProps) => {
+const TodoItem: React.FC<TodoItemProps> = ({ id, title, done, handleDelete, handleDone}:TodoItemProps) => {
   function handleChangeCheckBox(){
     handleDone(!done);
   }
@@ -10,7 +10,7 @@ const TodoItem: React.FC<TodoItemProps> = ({ title, done, handleDone}:TodoItemPr
         <input id={inputId} type="checkbox" onChange={handleChangeCheckBox} checked={done} />
       <label htmlFor={inputId}><h1>{title}</h1></label>
       {done && <p>Done!</p>}
-      <button>🗑️</button>
+      <button onClick={() => handleDelete(id)}>🗑️</button>
     </li>
   )
 }
