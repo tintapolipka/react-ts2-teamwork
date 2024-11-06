@@ -1,3 +1,3 @@
 export interface HeaderProps {
-  onClick: () => void
+  onAddTodo: (title: string) => void
 }
