@@ -17,7 +17,7 @@ export const TodoService = {
 
   addTodo(title: string): Todo {
     const todos = this.getTodos();
-    const newTodo: Todo = { id: todos.length + 1, title, done: false };
+    const newTodo: Todo = { id: Math.max(todos.map(todo => todo.id)) + 1, title, done: false };
     todos.push(newTodo);
     this.setTodos(todos);
     return newTodo;
