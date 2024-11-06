@@ -1,14 +1,15 @@
 import TodoItem from "./TodoItem";
 import { TodoListProps, TodoItemProps } from "../interfaces/Todo";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { TodoService } from "../service/TodoService";
 import Header from "./Header";
+
 
 const TodoList: React.FC<TodoListProps> = ({ todos }) => {
     const [todoList, setTodoList] = useState([...todos]);
 
     useEffect(() => {
-        setTodos(todoList);
+      TodoService.setTodos(todoList);
     }, [todoList]);
 
     function handleTodoChanged(index: number): TodoItemProps['handleDone'] {
