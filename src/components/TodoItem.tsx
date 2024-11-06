@@ -13,8 +13,7 @@ const TodoItem: React.FC<TodoItemProps> = ({ title, done, handleDelete, handleDo
   return (
     <li>
       <input id={inputId} type="checkbox" onChange={handleChangeCheckBox} checked={done} />
-      <label htmlFor={inputId}><h1>{title}</h1></label>
-      {done && <p>Done!</p>}
+      <label htmlFor={inputId}><h1 className={done?"done" :""}>{title}</h1></label>
       <button onClick={handleDeleteTodo}>🗑️</button>
     </li>
   )
