@@ -46,7 +46,7 @@ const TodoList: React.FC = () => {
     />
   ));
 
-  return <><button onClick={handleAddTodo}></button><ul>{todoListItems}</ul></>;
+  return <><button onClick={handleAddTodo}>Add a fake todo</button><ul>{todoListItems}</ul></>;
 };
 
 export default TodoList;
