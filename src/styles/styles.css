@@ -13,7 +13,7 @@
   box-sizing: border-box;
 }
 
-body {   
+  
   .todo-header {
     display: flex;
     flex-direction: column;
@@ -39,8 +39,12 @@ body {
     height: 40px;
     width: 40px;
     background: limegreen;
+    font-size: larger;
   }
-
+  .todo-body button:hover{
+    background: rgb(129, 238, 129);
+  }
+  body { 
   background: var(--main);
   min-height: 100vh;
   display: flex;
