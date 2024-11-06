@@ -104,13 +104,15 @@ h5 {
 }
 
 footer {
-  position: fixed;
+  /* position: fixed;
   left: 0;
-  bottom: 0;
+  bottom: 0; */
   width: 100%;
   background-color: var(--dark);
   color: var(--accent);
   text-align: center;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 footer p {
