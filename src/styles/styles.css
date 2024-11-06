@@ -49,6 +49,7 @@ body {
 }
 
 .container {
+  margin-top: 1rem;
   background: #ffffff;
   padding: 25px;
   width: 550px;
@@ -78,7 +79,7 @@ ul li {
   list-style: none;
   font-size: 18px;
   cursor: pointer;
-  padding: 10px;
+  padding: .8rem;
 }
 
 li {
@@ -88,6 +89,19 @@ li {
   background: var(--accent);
   margin-bottom: 10px;
   border-radius: 5px;
+}
+
+li label h1 {
+  font-size:larger;
+}
+.done{
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+input[type="checkbox"]{
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 h5 {
