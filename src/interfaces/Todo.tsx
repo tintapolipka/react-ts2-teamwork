@@ -4,10 +4,6 @@ export interface Todo {
   done: boolean;
 }
 
-export interface TodoListProps {
-  todos: Todo[];
-}
-
 export interface TodoItemProps extends Todo {
   handleDelete: () => void;
   handleDone: (isdone:boolean) => void;
