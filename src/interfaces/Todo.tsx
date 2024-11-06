@@ -6,6 +6,7 @@ export interface Todo {
 
 export interface TodoListProps {
   todos: Todo[];
+  addTodo: (title: string) => void;
 }
 
 export interface TodoItemProps extends Todo {
